@@ -1,0 +1,27 @@
+﻿@model WebApplication4.Models.Work
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <h3>Форма добавления</h3>
+        @using (Html.BeginForm("Add", "Home", FormMethod.Post))
+        {
+            <input type="hidden" value="@ViewBag.Add" name="AddLabel" />
+
+            @Html.HiddenFor(m => m.Id)
+            @Html.LabelFor(m => m.Name, "Введите свое имя")
+            <br />
+            @Html.TextBoxFor(m => m.Name)
+            <br />
+            @Html.LabelFor(m => m.Surname, "Введите фамилию")
+            <br />
+            @Html.TextBoxFor(m => m.Surname)
+            <br />
+            @Html.LabelFor(m => m.Ball, "Введите ball")
+            <br />
+            @Html.TextBoxFor(m => m.Ball)
+            <p><input type="submit" value="Отправить" /></p>
+
+        }
+    </div>

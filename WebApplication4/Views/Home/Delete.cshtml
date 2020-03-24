@@ -1,0 +1,29 @@
+﻿@model WebApplication4.Models.DataContext.Tables.TbWork
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Удаление книги</h2>
+
+    <fieldset>
+    <b><dt>Name</dt></b>
+        <p>
+        @Html.DisplayFor(model => model.Name)
+        </p>
+
+    <b><dt>Surname</dt></b>
+        <p>
+        @Html.DisplayFor(model => model.Surname)
+         </p>
+
+    <b><dt>Ball</dt></b>
+        <p>
+        @Html.DisplayFor(model => model.Ball)
+        </p>
+</fieldset>
+
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}
